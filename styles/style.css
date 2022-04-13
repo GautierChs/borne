@@ -2,7 +2,6 @@ body {
   color: #fafafa;
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: inherit;
 }
 html {
     scroll-behavior: smooth;
@@ -32,16 +31,21 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.8;
   box-shadow: 1px 5px 5px rgb(0,0,0);
   z-index: 1;
+  text-decoration: none;
 }
 
 H1 {
   margin-top:-30px;
   font-size:40px;
+  color: white;
+  text-decoration: none;
 }
 
 H2 {
   font-size:25px;
   margin-top:-5px;
+  color: white;
+  text-decoration: none;
 }
 
 H3 {
@@ -53,6 +57,7 @@ H3 {
 .navigation {
   margin-left:120px;
   padding-top:23px;
+  color: white;
 }
 
 .container {
@@ -63,13 +68,10 @@ H3 {
 
 .afficher {
 	  background-color:white;
-    border-radius: 0.25rem;
+    border-radius: 5%;
     color: rgb(255, 255, 255, 1);
-    -webkit-text-decoration-line:none;
-    text-decoration-line:none;
-    border:none;
     cursor: pointer;
-    box-shadow: 2px 2px 7px black;
+    box-shadow: 2px 2px 10px black;
     -webkit-transform: scale(1);
     transform: scale(1);
     background : #fafafafa;
@@ -112,4 +114,99 @@ td {
   margin-left: 20px;
   margin-top: 35px;
   width: 30px;
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+	body {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+
+	img,
+	table,
+	td,
+	blockquote,
+	code,
+	pre,
+	textarea,
+	input,
+	iframe,
+	object,
+	embed,
+	video {
+		max-width: 100%;
+	}
+
+	/* conserver le ratio des images */
+
+	img {
+		height: auto;
+	}
+
+	/* gestion des mots longs */
+
+	textarea,
+	table,
+	td,
+	th,
+	code,
+	pre,
+	samp {
+		-webkit-hyphens: auto; /* césure propre */
+		-moz-hyphens: auto;
+		hyphens: auto;
+		word-wrap: break-word; /* passage à la ligne forcé */
+	}
+
+	code,
+	pre,
+	samp {
+		white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+	}
+
+	/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+
+	.element1,
+	.element2 {
+		float: none;
+		width: auto;
+	}
+
+	/* masquer les éléments superflus */
+
+	.hide_mobile {
+		display: none !important;
+	}
+
+	/* Un message personnalisé */
+
+	body:before {
+		content: "Version mobile du site";
+		display: block;
+		text-align: center;
+		font-style: italic;
+		color: #777;
+	}
+}
+
+@media (max-device-width:768px) and (orientation: landscape) {
+  html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+  }
 }
